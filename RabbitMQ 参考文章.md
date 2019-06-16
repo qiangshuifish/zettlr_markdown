@@ -1,0 +1,5 @@
+1. [spring-amqp 官方文档](<https://docs.spring.io/spring-amqp/docs/2.1.7.RELEASE/reference/html/>)
+2. [Springboot 消息传递](<https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-messaging.html#boot-features-amqp>)
+3. [Spring AMQP中文文档](https://www.jianshu.com/p/261c4f70d5e9)
+4. [Spring AMQP中文文档](<http://ju.outofmemory.cn/entry/320538>)
+5. [RabbitMQ教程](https://blog.csdn.net/hellozpc/article/details/81436980#t7)

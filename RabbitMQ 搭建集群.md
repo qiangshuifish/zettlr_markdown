@@ -74,7 +74,7 @@ rabbit-server -detached
 
 镜像模式，根据其名字就是知道是在各个节点进行消息的镜像复制，依托于 [Policies](<https://www.rabbitmq.com/parameters.html#policies>) 模块我们可以实现指定某一个交换机和队列，或某一些交换机和队列的数据镜像存储。对于节点，也可以指定某几个节点或者全部节点来镜像存储。下面是 RabbitMQ 后台管理 [Policies](<https://www.rabbitmq.com/parameters.html#policies>) 的界面。
 
-![01d7abc5f23108a1690367796385550a.png](images\01d7abc5f23108a1690367796385550a.png)
+![rabbitmq 搭建集群镜像模式webui.png](images\rabbitmq 搭建集群镜像模式webui.png)
 
 
 使用命令
@@ -91,7 +91,7 @@ rabbitmqctl set_policy ha 'test_ha^' '{"ha-mode":"all","ha-sync-mode":"automatic
 
 * -p vhostpath 加上 -p 参数后，后面可以跟着指定的虚拟机
 * name 定义一个当前 set_policy 的名称
-* pattern 是匹配队列名称的正则表达式 , 进行区分哪些队列使用哪些策略
+* pattern 是匹配队列名称的正则表达式 , “^”代表所有，“^ha_”代表所有"ha"开头的
 * priority 优先级。一个队列/交换机只会有一个生效的 Policy，如果匹配多个 Policy，则优先级数值最大的 Policy 生效
 * definition JSON格式的一组键值对，表示设置的属性，会被注入匹配队列/交换机：
     * ha-mode：1.all 队列镜像在群集中的所有节点上。当新节点添加到群集时，队列将镜像到该节点2.exactly 集群中的队列实例数。3.nodes 队列镜像到节点名称中列出的节点。 
